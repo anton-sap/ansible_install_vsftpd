@@ -1,0 +1,12 @@
+---
+# tasks file for vsftpd_role
+- name: Install vsftpd
+  ansible.builtin.yum:
+    name: vsftpd
+    state: installed
+
+- name: Start service
+  ansible.builtin.service:
+    name: vsftpd
+    state: started
+    enabled: yes

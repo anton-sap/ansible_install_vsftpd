@@ -1,0 +1,6 @@
+---
+- hosts: alma
+  gather_facts: True
+  become: yes
+  roles:
+    - vsftpd_role
